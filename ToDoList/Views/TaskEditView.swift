@@ -29,13 +29,19 @@ struct TaskEditView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Task")){
+            Section(header: Text("Task")) {
                 TextField("Task Name", text: $name)
                 TextField("Desc", text: $desc)
             }
-            Section(header: Text("Due Date")){
+            Section(header: Text("Due Date")) {
                 Toggle("Schedule Time", isOn: $scheduleTime)
                 DatePicker("Due Date", selection: $dueDate, displayedComponents: displayComps())
+            }
+            if selectedTaskItem?.isCompleted() ?? false {
+                Section(header: Text("Completed")) {
+                    Text(selectedTaskItem?.completedData?.formatted(date: .abbreviated, time: .shortened) ?? "")
+                        .foregroundColor(.green)
+                }
             }
             Section(){
                 Button("Save", action: saveAction)
