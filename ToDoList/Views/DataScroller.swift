@@ -1,16 +1,10 @@
-//
-//  DataScroller.swift
-//  ToDoList
-//
-//  Created by Иван Булгаков on 9.7.2024.
-//
-
 import SwiftUI
 
 struct DataScroller: View {
     @EnvironmentObject var dateHolder: DateHolder
     @Environment(\.managedObjectContext) private var viewContext
-
+    @State private var isDatePickerVisible = false
+    
     var body: some View {
         HStack {
             Spacer()
@@ -19,11 +13,22 @@ struct DataScroller: View {
                     .imageScale(.large)
                     .font(Font.title.weight(.bold))
             }
-            Text(dateFormatted())
-                .font(.title)
-                .bold()
-                .animation(.none)
-                .frame(maxWidth: .infinity)
+            Button(action: { isDatePickerVisible.toggle() }) {
+                Text(dateFormatted())
+                    .font(.title)
+                    .bold()
+                    .animation(.none)
+                    .frame(maxWidth: .infinity)
+            }
+            .sheet(isPresented: $isDatePickerVisible) {
+                DatePicker(
+                    "Choose date",
+                    selection: $dateHolder.date,
+                    displayedComponents: .date
+                )
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .padding()
+            }
             Button(action: moveForward) {
                 Image(systemName: "arrow.right")
                     .imageScale(.large)

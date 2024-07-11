@@ -1,10 +1,3 @@
-//
-//  TaskCell.swift
-//  ToDoList
-//
-//  Created by Иван Булгаков on 8.7.2024.
-//
-
 import SwiftUI
 
 struct TaskCell: View {
