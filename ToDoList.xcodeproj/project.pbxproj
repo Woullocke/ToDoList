@@ -17,6 +17,11 @@
 		1551F7872C3C388000DE8338 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F77E2C3C388000DE8338 /* FloatingButton.swift */; };
 		1551F7882C3C388000DE8338 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F77C2C3C388000DE8338 /* TaskListView.swift */; };
 		1551F78E2C3C388700DE8338 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F78A2C3C388700DE8338 /* Persistence.swift */; };
+		15B37F012C3EB8BC0014B573 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B37F002C3EB8BC0014B573 /* Launch Screen.storyboard */; };
+		15D990DB2C3D312B00D6035A /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D990DA2C3D312B00D6035A /* CheckBoxView.swift */; };
+		15D990DD2C3D324600D6035A /* TaskItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D990DC2C3D323500D6035A /* TaskItemExtension.swift */; };
+		15D990DF2C3D605E00D6035A /* DataScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D990DE2C3D605D00D6035A /* DataScroller.swift */; };
+		15D990E12C3D840300D6035A /* TaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D990E02C3D840300D6035A /* TaskFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		1551F77E2C3C388000DE8338 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		1551F77F2C3C388000DE8338 /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 		1551F78A2C3C388700DE8338 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		15B37F002C3EB8BC0014B573 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		15D990DA2C3D312B00D6035A /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		15D990DC2C3D323500D6035A /* TaskItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemExtension.swift; sourceTree = "<group>"; };
+		15D990DE2C3D605D00D6035A /* DataScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScroller.swift; sourceTree = "<group>"; };
+		15D990E02C3D840300D6035A /* TaskFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,9 @@
 				1551F77E2C3C388000DE8338 /* FloatingButton.swift */,
 				1551F77F2C3C388000DE8338 /* TaskEditView.swift */,
 				1541C4652C3C3D6600309171 /* TaskCell.swift */,
+				15D990DA2C3D312B00D6035A /* CheckBoxView.swift */,
+				15D990DE2C3D605D00D6035A /* DataScroller.swift */,
+				15B37F002C3EB8BC0014B573 /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,8 +108,10 @@
 		1551F78D2C3C388700DE8338 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				15D990DC2C3D323500D6035A /* TaskItemExtension.swift */,
 				1541C4632C3C3A8B00309171 /* DataHolder.swift */,
 				1551F78A2C3C388700DE8338 /* Persistence.swift */,
+				15D990E02C3D840300D6035A /* TaskFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B37F012C3EB8BC0014B573 /* Launch Screen.storyboard in Resources */,
 				152395692C3BEC6D00BA6152 /* Preview Assets.xcassets in Resources */,
 				152395662C3BEC6D00BA6152 /* Assets.xcassets in Resources */,
 			);
@@ -177,12 +193,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1551F78E2C3C388700DE8338 /* Persistence.swift in Sources */,
+				15D990DD2C3D324600D6035A /* TaskItemExtension.swift in Sources */,
 				1551F7862C3C388000DE8338 /* TaskEditView.swift in Sources */,
 				1551F7872C3C388000DE8338 /* FloatingButton.swift in Sources */,
+				15D990E12C3D840300D6035A /* TaskFilter.swift in Sources */,
 				1551F7882C3C388000DE8338 /* TaskListView.swift in Sources */,
+				15D990DB2C3D312B00D6035A /* CheckBoxView.swift in Sources */,
 				1541C4662C3C3D6600309171 /* TaskCell.swift in Sources */,
 				152395622C3BEC6C00BA6152 /* ToDoListApp.swift in Sources */,
 				1541C4642C3C3A8F00309171 /* DataHolder.swift in Sources */,
+				15D990DF2C3D605E00D6035A /* DataScroller.swift in Sources */,
 				1523956E2C3BEC6D00BA6152 /* ToDoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,12 +337,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
-				DEVELOPMENT_TEAM = W47PP4T637;
+				DEVELOPMENT_TEAM = 3NK3XM354M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -331,7 +352,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Woullocke.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = danilvdsvs.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,12 +368,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
-				DEVELOPMENT_TEAM = W47PP4T637;
+				DEVELOPMENT_TEAM = 3NK3XM354M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -361,7 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Woullocke.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = danilvdsvs.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
